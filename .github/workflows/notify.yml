@@ -1,0 +1,28 @@
+name: Deployment Notifications
+
+on:
+  workflow_run:
+    workflows: ['Deploy to GitHub Pages']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify successful deployment
+        if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+        env:
+          WEBHOOK_URL: ${{ secrets.DEPLOYMENT_WEBHOOK_URL }}
+        run: |
+          if [ -n "$WEBHOOK_URL" ]; then
+            curl --fail --silent --show-error -X POST "$WEBHOOK_URL"               -H 'Content-Type: application/json'               -d '{"text":"Portfolio website deployment succeeded."}'
+          else
+            echo "DEPLOYMENT_WEBHOOK_URL secret is not configured; skipping external notification."
+          fi
+      - name: Report failed deployment
+        if: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'failure' }}
+        run: echo "The deployment workflow failed. Check the Actions logs."

@@ -2,25 +2,27 @@ name: Validate HTML & CSS
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main, develop, 'feature/**', 'ci/**', 'theme/**']
   pull_request:
-    branches: [main]
+    branches: [main, develop]
+
+permissions:
+  contents: read
 
 jobs:
   validate:
+    name: validate
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Check out repository
         uses: actions/checkout@v4
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - name: Install validation tools
-        run: |
-          npm install -g htmlhint
-          npm install -g csslint
-      - name: Validate HTML files
-        run: htmlhint "*.html" --config .htmlhintrc
-      - name: Validate CSS files
-        run: csslint css/*.css --quiet
+          node-version: 20
+      - name: Install HTML and CSS linters
+        run: npm install --no-save htmlhint stylelint stylelint-config-standard
+      - name: Validate HTML
+        run: npx htmlhint index.html
+      - name: Validate CSS
+        run: npx stylelint 'css/**/*.css'
