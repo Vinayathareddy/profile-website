@@ -1,6 +1,7 @@
 /* Theme tokens only. Keep all design values here so themes can be changed centrally. */
 :root {
   color-scheme: light;
+
   --color-bg: #f8f5f0;
   --color-surface: #fffdfa;
   --color-surface-soft: #f0e9e1;
@@ -10,7 +11,7 @@
   --color-primary-dark: #85464b;
   --color-accent: #d9ad8e;
   --color-line: #e7ddd3;
-  --color-white: #ffffff;
+  --color-white: #fff;
   --color-shadow: rgb(55 38 28 / 10%);
   --font-body: 'DM Sans', sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
@@ -27,8 +28,10 @@
   --container-width: 70rem;
   --transition: 220ms ease;
 }
+
 [data-theme='dark'] {
   color-scheme: dark;
+
   --color-bg: #211f21;
   --color-surface: #2d292c;
   --color-surface-soft: #393236;
@@ -41,6 +44,7 @@
   --color-white: #211f21;
   --color-shadow: rgb(0 0 0 / 25%);
 }
+
 [data-theme='warm'] {
   --color-bg: #fbf1e4;
   --color-surface: #fff9ef;
