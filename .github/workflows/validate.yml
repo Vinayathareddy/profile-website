@@ -1,4 +1,5 @@
-name: Validate HTML & CSS
+
+name: Validate HTML, CSS, JavaScript & README
 
 on:
   push:
@@ -13,16 +14,27 @@ jobs:
   validate:
     name: validate
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Install HTML and CSS linters
-        run: npm install --no-save htmlhint stylelint stylelint-config-standard
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Validate HTML
         run: npx htmlhint index.html
+
       - name: Validate CSS
         run: npx stylelint 'css/**/*.css'
+
+      - name: Validate JavaScript
+        run: npx eslint 'js/**/*.js'
+
+      - name: Validate README
+        run: npx markdownlint-cli2 README.md
