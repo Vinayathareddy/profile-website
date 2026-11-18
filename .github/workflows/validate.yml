@@ -1,28 +1,52 @@
-name: Validate HTML & CSS
+
+name: Validate HTML, CSS and JavaScript
 
 on:
   push:
-    branches: [main, develop, 'feature/**', 'ci/**', 'theme/**']
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
   validate:
-    name: validate
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - name: Install HTML and CSS linters
+          node-version: 24
+
+      - name: Install validation tools
         run: npm install --no-save htmlhint stylelint stylelint-config-standard
+
       - name: Validate HTML
         run: npx htmlhint index.html
+
       - name: Validate CSS
         run: npx stylelint 'css/**/*.css'
+
+      - name: Check JavaScript syntax
+        run: |
+          for file in js/*.js; do
+            node --check "$file"
+          done
+
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f css/theme.css
+          test -f css/style.css
+          test -f js/main.js
+
