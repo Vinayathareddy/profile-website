@@ -1,59 +1,133 @@
-/* Theme tokens only. Keep all design values here so themes can be changed centrally. */
+/* THE ONE THEME FILE - variables only. Edit this file to retheme the whole site.
+   :root is the default (light) theme. The blocks below it are optional themes
+   picked by the theme button in the navbar (JS sets data-theme on <html>). */
 :root {
-  color-scheme: light;
+  /* Primary Colors (soft coral + lavender) */
+  --color-primary: #e2709b;
+  --color-primary-light: #f7b2c9;
+  --color-primary-dark: #8b4a6b;
 
-  --color-bg: #f8f5f0;
-  --color-surface: #fffdfa;
-  --color-surface-soft: #f0e9e1;
-  --color-text: #292723;
-  --color-muted: #77716a;
-  --color-primary: #a95f63;
-  --color-primary-dark: #85464b;
-  --color-accent: #d9ad8e;
-  --color-line: #e7ddd3;
-  --color-white: #fff;
-  --color-shadow: rgb(55 38 28 / 10%);
-  --font-body: 'DM Sans', sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --space-1: 0.5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2rem;
-  --space-5: 3rem;
-  --space-6: 4rem;
-  --radius-sm: 0.75rem;
-  --radius-md: 1.25rem;
-  --radius-lg: 2rem;
-  --shadow-card: 0 1rem 3rem var(--color-shadow);
-  --container-width: 70rem;
-  --transition: 220ms ease;
+  /* Background Colors */
+  --color-bg: #fffaf5;
+  --color-bg-secondary: #f6f0ff;
+  --color-bg-card: #fff;
+
+  /* Text Colors */
+  --color-text: #4a3b4f;
+  --color-text-secondary: #85768a;
+  --color-text-inverse: #fff;
+
+  /* Accent & Borders */
+  --color-accent: #8fc9b0;
+  --color-border: #efe3f3;
+  --color-shadow: rgb(139, 74, 107, 0.15);
+  --color-overlay: rgb(50, 30, 55, 0.85);
+
+  /* Pastel palette used for cards, blobs and gradients */
+  --pastel-peach: #ffd6c0;
+  --pastel-pink: #ffc2d9;
+  --pastel-lavender: #e2d1f9;
+  --pastel-mint: #c9eedc;
+  --pastel-butter: #fff0b8;
+  --pastel-sky: #cfe6ff;
+
+  /* Family section warm sub-palette */
+  --warm-bg: #fff1e0;
+  --warm-card: #ffe3c4;
+  --warm-primary: #d9663f;
+  --warm-text: #5c3317;
+
+  /* Typography */
+  --font-primary: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+  --font-heading: "Georgia", serif;
+  --font-size-base: 16px;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --border-radius: 20px;
+  --transition-speed: 0.3s;
 }
 
-[data-theme='dark'] {
-  color-scheme: dark;
+/* Dark theme (same variable names) */
+:root[data-theme="dark"] {
+  /* Primary Colors (soft coral + lavender) */
+  --color-primary: #f48fb1;
+  --color-primary-light: #f8bbd0;
+  --color-primary-dark: #f5c6dc;
 
-  --color-bg: #211f21;
-  --color-surface: #2d292c;
-  --color-surface-soft: #393236;
-  --color-text: #f5eee9;
-  --color-muted: #c1b3ad;
-  --color-primary: #df9293;
-  --color-primary-dark: #f0b3ad;
-  --color-accent: #bd9479;
-  --color-line: #4b4144;
-  --color-white: #211f21;
-  --color-shadow: rgb(0 0 0 / 25%);
+  /* Background Colors */
+  --color-bg: #1d1a2b;
+  --color-bg-secondary: #251f38;
+  --color-bg-card: #2d2644;
+
+  /* Text Colors */
+  --color-text: #ece6f5;
+  --color-text-secondary: #b3a9c9;
+  --color-text-inverse: #1d1a2b;
+
+  /* Accent & Borders */
+  --color-accent: #7fd1b9;
+  --color-border: #3a3158;
+  --color-shadow: rgb(0, 0, 0, 0.45);
+  --color-overlay: rgb(8, 6, 16, 0.9);
+
+  /* Pastel palette used for cards, blobs and gradients */
+  --pastel-peach: #5a3d4a;
+  --pastel-pink: #6a3b57;
+  --pastel-lavender: #45396b;
+  --pastel-mint: #2f5b55;
+  --pastel-butter: #5c5230;
+  --pastel-sky: #2f4a6b;
+
+  /* Family section warm sub-palette */
+  --warm-bg: #2a1f1d;
+  --warm-card: #3d2b26;
+  --warm-primary: #ffb38a;
+  --warm-text: #ffe6d4;
 }
 
-[data-theme='warm'] {
-  --color-bg: #fbf1e4;
-  --color-surface: #fff9ef;
-  --color-surface-soft: #f3dfc8;
-  --color-text: #3d2c20;
-  --color-muted: #806b58;
-  --color-primary: #ad633e;
-  --color-primary-dark: #874a2e;
-  --color-accent: #d69a57;
-  --color-line: #ead5bd;
-  --color-shadow: rgb(83 52 25 / 11%);
+/* Warm tones theme (same variable names) */
+:root[data-theme="warm"] {
+  /* Primary Colors (soft coral + lavender) */
+  --color-primary: #d2691e;
+  --color-primary-light: #f4a460;
+  --color-primary-dark: #7a3b12;
+
+  /* Background Colors */
+  --color-bg: #fff7ec;
+  --color-bg-secondary: #ffecd2;
+  --color-bg-card: #fff;
+
+  /* Text Colors */
+  --color-text: #4d2e1a;
+  --color-text-secondary: #8c6a52;
+  --color-text-inverse: #fff;
+
+  /* Accent & Borders */
+  --color-accent: #c0562f;
+  --color-border: #f2d6b8;
+  --color-shadow: rgb(122, 59, 18, 0.18);
+  --color-overlay: rgb(60, 28, 10, 0.85);
+
+  /* Pastel palette used for cards, blobs and gradients */
+  --pastel-peach: #ffd9b3;
+  --pastel-pink: #ffc4a8;
+  --pastel-lavender: #f3d3b5;
+  --pastel-mint: #e8dcae;
+  --pastel-butter: #ffe7a0;
+  --pastel-sky: #ffddc2;
+
+  /* Family section warm sub-palette */
+  --warm-bg: #ffe9cf;
+  --warm-card: #ffd9ad;
+  --warm-primary: #b4471a;
+  --warm-text: #5a2d0f;
 }
