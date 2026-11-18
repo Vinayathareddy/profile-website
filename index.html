@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vinayatha's personal profile website: journey, likings, family and hobbies">
+  <title>Vinayatha | Personal Profile</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="progress"></div>
+
+  <header id="hero">
+    <nav class="navbar">
+      <span class="logo">Vinayatha.</span>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#interests">Likings</a></li>
+        <li><a href="#family">Family</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a class="nav-cta" href="#footer">Say Hello</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Change theme">&#9680;</button>
+    </nav>
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="greeting">Hey there, I'm</p>
+        <h1>Vinayatha</h1>
+        <p class="typing-line">I'm <span class="typing" id="typing">an Impactor at Psiog</span><span class="cursor"></span></p>
+        <p class="tagline"><strong>Curious mind. Creative soul. Impactor at Psiog.</strong><br>I enjoy learning, building meaningful things, and finding inspiration in everyday moments. Here's a little glimpse into my professional journey and the things I love.</p>
+        <a class="btn" href="#journey">Explore My Journey &rarr;</a>
+      </div>
+      <div class="hero-photo">
+        <img src="images/hero/me.svg" alt="Avatar of Vinayatha" width="300" height="300">
+        <span class="badge t1">&#128187;</span><span class="badge t2">&#127859;</span><span class="badge t3">&#128131;</span><span class="badge t4">&#127871;</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="journey" class="alt">
+      <h2>My Professional Journey</h2>
+      <p class="subtitle">From curious student to building real automation</p>
+      <div class="timeline">
+        <article class="milestone reveal">
+          <span class="period">2020 &ndash; 2023</span>
+          <h3>&#127891; Bachelor of Computer Applications</h3>
+          <p class="place">Saveetha University</p>
+          <p>Where my tech story began: first lines of code, first bugs and the first "it works!" moment.</p>
+          <p class="more">I built a strong base in programming, databases and web basics, and found out how much I enjoy turning ideas into working things.</p>
+          <button class="toggle-btn" type="button">Show more</button>
+        </article>
+        <article class="milestone reveal">
+          <span class="period">2023 &ndash; 2025</span>
+          <h3>&#128218; Master of Computer Applications</h3>
+          <p class="place">SRM University</p>
+          <p>Went deeper into software engineering, problem solving and modern technologies.</p>
+          <p class="more">Alongside my studies I worked on projects, sharpened my technical skills and prepared for life in the industry.</p>
+          <button class="toggle-btn" type="button">Show more</button>
+        </article>
+        <article class="milestone reveal">
+          <span class="period">10-month internship</span>
+          <h3>&#129302; RPA Developer Intern</h3>
+          <p class="place">Philips</p>
+          <p>Taught software robots to do the repetitive work, so people could focus on the interesting work.</p>
+          <p class="more">I learned how real teams build automation, from understanding a business process to delivering a bot that saves time every single day.</p>
+          <button class="toggle-btn" type="button">Show more</button>
+        </article>
+        <article class="milestone reveal">
+          <span class="period">Present</span>
+          <h3>&#128640; Impactor</h3>
+          <p class="place">Psiog</p>
+          <p>Growing every day with hands-on projects, Git, DevOps and building things from scratch.</p>
+          <p class="more">This website is part of that journey: written by hand and shipped through a CI/CD pipeline on GitHub Actions.</p>
+          <button class="toggle-btn" type="button">Show more</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="interests">
+      <h2>Things I Love</h2>
+      <p class="subtitle">A little peek into my world</p>
+
+      <h3 class="category-title">&#127911; Music</h3>
+      <div class="grid">
+        <article class="card wide reveal">
+          <div>
+            <h3>Music for every mood</h3>
+            <p>I enjoy all types of music. What I listen to depends on how I feel that day.</p>
+            <div class="chips">
+              <span class="chip">&#128516; Happy</span>
+              <span class="chip">&#128524; Chill</span>
+              <span class="chip">&#129394; Sad</span>
+              <span class="chip">&#9889; Energetic</span>
+              <span class="chip">&#128149; Romantic</span>
+              <span class="chip">&#128131; Dance</span>
+            </div>
+          </div>
+          <div class="pic"><img src="images/interests/music.svg" alt="Headphones with music notes" width="300" height="200" loading="lazy"></div>
+        </article>
+      </div>
+
+      <h3 class="category-title">&#127910; Movies &amp; Series</h3>
+      <div class="grid">
+        <article class="card reveal">
+          <span class="tag">Movie</span>
+          <h3>&#127916; Godavari</h3>
+          <p>Telugu feel-good classic with a lovely river journey.</p>
+          <div class="poster-frame"><img class="poster-img" src="images/interests/godavari.svg" alt="Godavari movie poster" width="200" height="280" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <span class="tag">Movie</span>
+          <h3>&#127916; Anand</h3>
+          <p>A sweet Telugu love story I can watch again and again.</p>
+          <div class="poster-frame"><img class="poster-img" src="images/interests/anand.svg" alt="Anand movie poster" width="200" height="280" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <span class="tag">Movie</span>
+          <h3>&#129464; Marvel</h3>
+          <p>Superhero adventures for a full-on movie night.</p>
+          <div class="poster-frame"><img class="poster-img" src="images/interests/marvel.svg" alt="Marvel movies illustration" width="200" height="280" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <span class="tag series">Series</span>
+          <h3>&#127818; When Life Gives You Tangerines</h3>
+          <p>A heartwarming story that stays with you.</p>
+          <div class="poster-frame"><img class="poster-img" src="images/interests/tangerines.svg" alt="When Life Gives You Tangerines poster" width="200" height="280" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <span class="tag series">Series</span>
+          <h3>&#129425; Squid Game</h3>
+          <p>An intense thriller I couldn't stop watching.</p>
+          <div class="poster-frame"><img class="poster-img" src="images/interests/squidgame.svg" alt="Squid Game poster" width="200" height="280" loading="lazy"></div>
+        </article>
+      </div>
+
+      <h3 class="category-title">&#127869;&#65039; Food</h3>
+      <div class="grid">
+        <article class="card reveal">
+          <h3>&#127837; Italian</h3>
+          <p>Creamy pasta and cheesy pizza.</p>
+          <div class="pic"><img src="images/interests/pasta.svg" alt="Italian pasta bowl" width="300" height="200" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <h3>&#127858; Korean</h3>
+          <p>Bibimbap, spicy and colorful.</p>
+          <div class="pic"><img src="images/interests/korean.svg" alt="Korean bibimbap bowl" width="300" height="200" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <h3>&#127790; Mexican</h3>
+          <p>Tacos with all the toppings.</p>
+          <div class="pic"><img src="images/interests/mexican.svg" alt="Mexican taco" width="300" height="200" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <h3>&#129377; Chinese</h3>
+          <p>Hot noodles in a takeout box.</p>
+          <div class="pic"><img src="images/interests/chinese.svg" alt="Chinese noodle box" width="300" height="200" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <h3>&#127835; South Indian</h3>
+          <p>Dosa, idli and sambar feel like home.</p>
+          <div class="pic"><img src="images/interests/dosa.svg" alt="South Indian dosa with chutneys" width="300" height="200" loading="lazy"></div>
+        </article>
+      </div>
+
+      <h3 class="category-title">&#9992;&#65039; Travel Bucket List</h3>
+      <div class="grid">
+        <article class="card reveal">
+          <h3>&#127983; Vietnam</h3>
+          <p>Rice terraces, lanterns and street food.</p>
+          <div class="pic"><img src="images/interests/vietnam.svg" alt="Vietnam conical hat and rice terraces" width="300" height="200" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <h3>&#127964; Dubai</h3>
+          <p>Skyscrapers and desert sunsets.</p>
+          <div class="pic"><img src="images/interests/dubai.svg" alt="Dubai skyline with a tall tower" width="300" height="200" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <h3>&#128508; Paris</h3>
+          <p>A picnic under the Eiffel Tower.</p>
+          <div class="pic"><img src="images/interests/paris.svg" alt="Paris Eiffel Tower" width="300" height="200" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <h3>&#127956; Switzerland</h3>
+          <p>Snowy peaks and green valleys.</p>
+          <div class="pic"><img src="images/interests/switzerland.svg" alt="Switzerland mountains" width="300" height="200" loading="lazy"></div>
+        </article>
+        <article class="card reveal">
+          <h3>&#128661; New York</h3>
+          <p>Times Square lights at night.</p>
+          <div class="pic"><img src="images/interests/newyork.svg" alt="New York Times Square at night" width="300" height="200" loading="lazy"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="family" class="alt">
+      <h2>My Family</h2>
+      <p class="subtitle">The people who make me who I am. Hover a card to flip it.</p>
+      <div class="family-banner reveal"><img src="images/family/family-banner.svg" alt="Family group avatars" width="900" height="260" loading="lazy"></div>
+      <div class="flip-grid">
+        <article class="flip reveal" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front"><img src="images/family/parents.svg" alt="Parents avatar" width="300" height="300" loading="lazy"><span>My Parents</span></div>
+            <div class="flip-back"><p>My first teachers and my biggest support. Everything I achieve starts with them.</p></div>
+          </div>
+        </article>
+        <article class="flip reveal" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front"><img src="images/family/brother.svg" alt="Younger brother avatar" width="300" height="300" loading="lazy"><span>My Younger Brother</span></div>
+            <div class="flip-back"><p>Working hard and growing fast. I'm proud of him, and he knows it.</p></div>
+          </div>
+        </article>
+        <article class="flip reveal" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front"><img src="images/family/grandparents.svg" alt="Grandparents avatar" width="300" height="300" loading="lazy"><span>My Grandparents</span></div>
+            <div class="flip-back"><p>Full of stories, blessings and love. Their stories are my favorite.</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies &amp; Passions</h2>
+      <p class="subtitle">Click a card to read more</p>
+      <div class="masonry">
+        <article class="hobby reveal" tabindex="0" role="button" data-img="images/hobbies/cooking.svg" data-title="Cooking" data-text="Cooking is my stress-buster. I love trying new recipes, especially Italian and South Indian dishes, and feeding the people I care about.">
+          <img class="hobby-img" src="images/hobbies/cooking.svg" alt="Avatar cooking" width="300" height="300" loading="lazy"><h3>Cooking</h3><p>Tap to read more</p>
+        </article>
+        <article class="hobby reveal" tabindex="0" role="button" data-img="images/hobbies/dancing.svg" data-title="Dancing" data-text="Dancing lets me express what words can't. Put on a good song and I'm happy.">
+          <img class="hobby-img" src="images/hobbies/dancing.svg" alt="Avatar dancing" width="300" height="300" loading="lazy"><h3>Dancing</h3><p>Tap to read more</p>
+        </article>
+        <article class="hobby reveal" tabindex="0" role="button" data-img="images/hobbies/gardening.svg" data-title="Gardening" data-text="Watching a small plant grow teaches patience. Gardening keeps me calm and close to nature.">
+          <img class="hobby-img" src="images/hobbies/gardening.svg" alt="Avatar gardening" width="300" height="300" loading="lazy"><h3>Gardening</h3><p>Tap to read more</p>
+        </article>
+        <article class="hobby reveal" tabindex="0" role="button" data-img="images/hobbies/movies.svg" data-title="Watching Movies" data-text="A good movie, some snacks and I'm in my own world. Telugu films and series are my weekend plan.">
+          <img class="hobby-img" src="images/hobbies/movies.svg" alt="Avatar watching movies" width="300" height="300" loading="lazy"><h3>Watching Movies</h3><p>Tap to read more</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lb-close" type="button" aria-label="Close">&times;</button>
+      <img id="lb-img" src="images/hobbies/cooking.svg" alt="Hobby">
+      <h3 id="lb-title"></h3>
+      <p id="lb-text"></p>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <h2>Say Hello &#128075;</h2>
+    <div class="social">
+      <a href="https://www.linkedin.com/">LinkedIn</a>
+      <a href="https://github.com/Vinayathareddy">GitHub</a>
+      <a href="mailto:vinayathareddy05@gmail.com">Email</a>
+    </div>
+    <p>Built with HTML, CSS &amp; JS | Deployed via GitHub Actions</p>
+    <p>&copy; <span id="year"></span> Vinayatha. All rights reserved.</p>
+  </footer>
+  <button id="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
