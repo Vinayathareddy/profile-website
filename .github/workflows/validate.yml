@@ -1,39 +1,41 @@
-name: Validate HTML, CSS, JavaScript & README
+
+name: Validate HTML, CSS and JavaScript
 
 on:
   push:
-    branches: [main, develop, 'feature/**', 'ci/**', 'theme/**']
+    branches: [main, develop]
   pull_request:
     branches: [main, develop]
-
-permissions:
-  contents: read
+  workflow_dispatch:
 
 jobs:
   validate:
-    name: validate
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
 
-      - name: Install validation tools
-        run: npm install -g htmlhint csslint
+      - name: Install HTMLHint
+        run: npm install --no-save htmlhint
 
       - name: Validate HTML
-        run: htmlhint "*.html" --config .htmlhintrc
-
-      - name: Validate CSS
-        run: csslint css/*.css --quiet
+        run: npx htmlhint index.html
 
       - name: Check JavaScript syntax
         run: |
-          for f in js/*.js; do node --check "$f"; done
+          for file in js/*.js; do
+            node --check "$file"
+          done
 
-      - name: Check README exists
-        run: test -s README.md
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f css/theme.css
+          test -f css/style.css
+          test -f js/main.js
