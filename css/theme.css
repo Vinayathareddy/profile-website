@@ -1,0 +1,59 @@
+/* Theme tokens only. Keep all design values here so themes can be changed centrally. */
+:root {
+  color-scheme: light;
+
+  --color-bg: #f8f5f0;
+  --color-surface: #fffdfa;
+  --color-surface-soft: #f0e9e1;
+  --color-text: #292723;
+  --color-muted: #77716a;
+  --color-primary: #a95f63;
+  --color-primary-dark: #85464b;
+  --color-accent: #d9ad8e;
+  --color-line: #e7ddd3;
+  --color-white: #fff;
+  --color-shadow: rgb(55 38 28 / 10%);
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 2rem;
+  --shadow-card: 0 1rem 3rem var(--color-shadow);
+  --container-width: 70rem;
+  --transition: 220ms ease;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg: #211f21;
+  --color-surface: #2d292c;
+  --color-surface-soft: #393236;
+  --color-text: #f5eee9;
+  --color-muted: #c1b3ad;
+  --color-primary: #df9293;
+  --color-primary-dark: #f0b3ad;
+  --color-accent: #bd9479;
+  --color-line: #4b4144;
+  --color-white: #211f21;
+  --color-shadow: rgb(0 0 0 / 25%);
+}
+
+[data-theme='warm'] {
+  --color-bg: #fbf1e4;
+  --color-surface: #fff9ef;
+  --color-surface-soft: #f3dfc8;
+  --color-text: #3d2c20;
+  --color-muted: #806b58;
+  --color-primary: #ad633e;
+  --color-primary-dark: #874a2e;
+  --color-accent: #d69a57;
+  --color-line: #ead5bd;
+  --color-shadow: rgb(83 52 25 / 11%);
+}
