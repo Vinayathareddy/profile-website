@@ -3,10 +3,17 @@ name: Validate HTML, CSS and JavaScript
 
 on:
   push:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate:
@@ -21,11 +28,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install HTMLHint
-        run: npm install --no-save htmlhint
+      - name: Install validation tools
+        run: npm install --no-save htmlhint stylelint stylelint-config-standard
 
       - name: Validate HTML
         run: npx htmlhint index.html
+
+      - name: Validate CSS
+        run: npx stylelint 'css/**/*.css'
 
       - name: Check JavaScript syntax
         run: |
@@ -39,3 +49,4 @@ jobs:
           test -f css/theme.css
           test -f css/style.css
           test -f js/main.js
+
